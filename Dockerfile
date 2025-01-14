@@ -40,7 +40,7 @@ COPY mouse6.jpg /var/www/localhost/htdocs/
 COPY mouse7.jpg /var/www/localhost/htdocs/
 COPY office7.jpg /var/www/localhost/htdocs/
 COPY office16.jpg /var/www/localhost/htdocs/
-COPY moffice19.jpg /var/www/localhost/htdocs/
+COPY office19.jpg /var/www/localhost/htdocs/
 COPY office21.jpg /var/www/localhost/htdocs/
 COPY pc.jpg /var/www/localhost/htdocs/
 COPY print.jpg /var/www/localhost/htdocs/
