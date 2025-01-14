@@ -11,7 +11,7 @@ RUN apk update && apk add --no-cache apache2
 RUN mkdir -p /var/www/localhost/htdocs
 
 # Menyalin isi folder UAS-PCC-YANYAN-2025 saja (tanpa foldernya)
-COPY UAS-PCC-YANYAN-2025/* /var/www/localhost/htdocs/
+COPY index.htmk /var/www/localhost/htdocs/
 
 # Menyediakan file teks sebagai demonstrasi
 RUN touch UAS-PCCM-YANYAN-2025.txt && \
