@@ -4,21 +4,21 @@ LABEL maintainer="YANYAN" \
       email="yanyanjulyandi123@gmail.com" \
       version="1.0"
 
-# Install nginx
-RUN apk add --no-cache nginx
+# Install Apache2
+RUN apk update && apk add --no-cache apache2
 
-# Salin index.html dan file gambar ke dalam folder yang tepat
-COPY index.html /usr/share/nginx/html/
-COPY ram2.jpg /usr/share/nginx/html/
-COPY pros1.jpg /usr/share/nginx/html/
-COPY ssd1.jpg /usr/share/nginx/html/
-COPY nvme1.jpg /usr/share/nginx/html/
-COPY key2.jpg /usr/share/nginx/html/
-COPY mouse.jpg /usr/share/nginx/html/
-COPY service.jpg /usr/share/nginx/html/
+# Membuat direktori untuk website
+RUN mkdir -p /var/www/localhost/htdocs
 
-# Expose port 80 untuk nginx
+# Menyalin isi folder UAS-PCC-YANYAN-2025 saja (tanpa foldernya)
+COPY UAS-PCC-YANYAN-2025/* /var/www/localhost/htdocs/
+
+# Menyediakan file teks sebagai demonstrasi
+RUN touch UAS-PCCM-YANYAN-2025.txt && \
+    echo "UAS" > UAS-PCC-YANYAN-2025.txt
+
+# Expose port 80 untuk Apache
 EXPOSE 80
 
-# Jalankan nginx di mode foreground
-CMD ["nginx", "-g", "daemon off;"]
+# Jalankan Apache di foreground
+CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
