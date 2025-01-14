@@ -36,8 +36,10 @@ COPY mouse2.jpg /var/www/localhost/htdocs/
 COPY mouse3.jpg /var/www/localhost/htdocs/
 COPY mouse4.jpg /var/www/localhost/htdocs/
 COPY mouse5.jpg /var/www/localhost/htdocs/
-COPY mouse6.jpg /var/www/localhost/htdocs/
-COPY mouse7.jpg /var/www/localhost/htdocs/
+COPY nvme1.jpg /var/www/localhost/htdocs/
+COPY nvme2.jpg /var/www/localhost/htdocs/
+COPY nvme3.jpg /var/www/localhost/htdocs/
+COPY nvme4.jpg /var/www/localhost/htdocs/
 COPY office7.jpg /var/www/localhost/htdocs/
 COPY office16.jpg /var/www/localhost/htdocs/
 COPY office19.jpg /var/www/localhost/htdocs/
