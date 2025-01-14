@@ -13,6 +13,7 @@ jobs:
    
       - name: login and build
         run: |
+        cd /path/to/PCC-UAS-2025
           docker build -t yanyanjymv/uas-pcc-yanyan-2025:latest -f Dockerfile .
           echo ${{ secrets.token }} | docker login -u ${{ secrets.username }} --password-stdin
           docker push yanyanjymv/uas-pcc-yanyan-2025:latest
